@@ -4,7 +4,7 @@
 
 <h2> 
 
-[¡Click here to visit the chat!](https://chat-realtime-firebase-js.netlify.app/)
+<a href="https://chat-realtime-firebase-js.netlify.app/" target="_blank">¡Click here to visit the chat!</a>
 
 </h2>
 
