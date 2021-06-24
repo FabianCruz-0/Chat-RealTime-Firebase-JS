@@ -52,7 +52,7 @@ input[name="enviarMensaje"]:hover{
 }
 .mensajeEnviado{
     background-color: rgb(12, 106, 189);
-    width: 100%;
+    max-width: 100%;
     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
