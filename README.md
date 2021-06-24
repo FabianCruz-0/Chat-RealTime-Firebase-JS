@@ -7,6 +7,9 @@
 [¡Click here to visit the chat!](https://chat-realtime-firebase-js.netlify.app/)
 
 </h2>
+
+🔐 You have to login with a Google Account. 🔐
+
 </div>
 <hr>
 
