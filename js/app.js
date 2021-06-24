@@ -68,7 +68,7 @@ const contenidoChat = (user) => {
 const loginFunct = () => {
 
     login.innerHTML = `
-        <button class="btn fw-bold" id="btnAcceder"><img src="../styles/imgs/google.png" width="30px"> &nbsp; Ingresar</button>
+        <button class="btn fw-bold" id="btnAcceder"><img src="../styles/imgs/google.png" width="30px"> &nbsp; Iniciar sesión</button>
     `
     
     const btnAcceder = document.querySelector('#btnAcceder')

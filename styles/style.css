@@ -9,8 +9,9 @@ body{
     background-image:
     linear-gradient(to bottom, rgb(0, 0, 0,0) 0%, rgba(0,0,0,1) 80%),
     url("/styles/imgs/stars.jpg");
-  font-family: 'Spartan', sans-serif;
+  font-family: arial;
   background-size: repeat;
+  font-weight: bold;
 }
 
 .fueraSesion{
@@ -43,6 +44,7 @@ input[name="enviarMensaje"]:hover{
 #btnAcceder{
     background-color: white;
     color: black;
+    margin-right: 20px;
 }
 #chat{
     height: 70vh;
