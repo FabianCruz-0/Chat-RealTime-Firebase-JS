@@ -43,7 +43,7 @@ const contenidoChat = (user) => {
                     chat.innerHTML += /*html*/`
                     <div class="d-flex justify-content-end mb-4">
                         <span class="badge badge-primary mensajeEnviado fw-bold text-end">
-                            ${doc.data().displayName} <br>
+                            ${doc.data().uname} <br>
                             <span class="fw-light">${doc.data().mensaje}</span>
                         </span>
                     </div>
@@ -52,7 +52,7 @@ const contenidoChat = (user) => {
                     chat.innerHTML += /*html*/`
                     <div class="d-flex justify-content-start mb-4">
                         <span class="badge badge-primary mensajeRecibido fw-bold text-start">
-                            ${doc.data().displayName} <br>
+                            ${doc.data().uname} <br>
                             <span class="fw-light">${doc.data().mensaje}</span>
                         </span>
                     </div>
