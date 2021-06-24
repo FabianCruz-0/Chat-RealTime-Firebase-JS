@@ -1,8 +1,6 @@
 <div align="center">
 
-<h1>Chat-RealTime-Firebase-JS</h1>
-
-<strong><h4>REALTIME CHAT APP WORKING 24/7.</h4></strong>
+<strong><h1>REALTIME CHAT APP WORKING 24/7.</h1></strong>
 
 <h2> 
 
