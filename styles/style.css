@@ -48,7 +48,7 @@ input[name="enviarMensaje"]:hover{
     height: 80vh;
     overflow: scroll;
     color: white;
-    padding: 20px 30px 0px 0px;
+    padding: 20px 30px 0px 30px;
 }
 .mensajeEnviado{
     background-color: rgb(12, 106, 189);
