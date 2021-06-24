@@ -75,6 +75,9 @@ const loginFunct = () => {
     
     btnAcceder.addEventListener('click', async() => {
         const provider = new firebase.auth.GoogleAuthProvider();
+        provider.setCustomParameters({
+            prompt: 'select_account'
+         });
         try {
             await firebase.auth().signInWithPopup(provider)
         } catch (error) {
