@@ -28,6 +28,7 @@ const contenidoChat = (user) => {
         firebase.firestore().collection('mensajes').add({
             mensaje: mensaje.value,
             uid: user.uid,
+            uname:user.displayName,
             fecha: Date.now()
         }).then(res => {
         })
@@ -42,7 +43,7 @@ const contenidoChat = (user) => {
                     chat.innerHTML += /*html*/`
                     <div class="d-flex justify-content-end mb-4">
                         <span class="badge badge-primary mensajeEnviado fw-bold text-end">
-                            ${user.displayName} <br>
+                            ${doc.data().displayName} <br>
                             <span class="fw-light">${doc.data().mensaje}</span>
                         </span>
                     </div>
@@ -51,7 +52,7 @@ const contenidoChat = (user) => {
                     chat.innerHTML += /*html*/`
                     <div class="d-flex justify-content-start mb-4">
                         <span class="badge badge-primary mensajeRecibido fw-bold text-start">
-                            ${user.displayName} <br>
+                            ${doc.data().mensaje} <br>
                             <span class="fw-light">${doc.data().mensaje}</span>
                         </span>
                     </div>
