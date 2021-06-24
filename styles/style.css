@@ -7,7 +7,7 @@ body{
 .navbar{
     background-image:
     linear-gradient(to bottom, rgb(0, 0, 0,0) 0%, rgba(0,0,0,1) 80%),
-    url("/public/imgs/stars.jpg");
+    url("/styles/imgs/stars.jpg");
   font-family: 'Spartan', sans-serif;
   background-size: repeat;
 }
