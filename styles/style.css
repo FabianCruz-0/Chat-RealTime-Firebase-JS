@@ -46,7 +46,7 @@ input[name="enviarMensaje"]:hover{
 }
 #chat{
     height: 80vh;
-    overflow-y: scroll;
+    overflow: scroll;
     color: white;
     padding: 20px 30px 0px 0px;
 }
