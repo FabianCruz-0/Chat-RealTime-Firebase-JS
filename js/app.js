@@ -25,11 +25,26 @@ const contenidoChat = (user) => {
         if(!mensaje.value.trim()){
             return
         }
+        let fechaMensaje = new Date();
+        let dia= fechaMensaje.getDate();
+        let mes = fechaMensaje.getMonth();
+        let anio = fechaMensaje.getFullYear();
+        let hora = fechaMensaje.getHours();
+        let minutos = fechaMensaje.getMinutes();
+        let distinguirHora = 'AM';
+        if (hora>=12)
+        {
+            hora = 24-hora
+            distinguirHora = 'PM'
+        }
+
+        let fechaAMostrar = ''+dia+'/'+mes+'/'+anio+'. Hora: '+hora+':'+minutos+distinguirHora+'.'
         firebase.firestore().collection('mensajes').add({
             mensaje: mensaje.value,
             uid: user.uid,
             uname:user.displayName,
-            fecha: Date.now()
+            fecha: Date.now(),
+            fechaMostrar: fechaAMostrar
         }).then(res => {
         })
         mensaje.value = ''
@@ -43,7 +58,7 @@ const contenidoChat = (user) => {
                     chat.innerHTML += /*html*/`
                     <div class="d-flex justify-content-end mb-4">
                         <span class="badge badge-primary mensajeEnviado fw-bold text-end">
-                            ${doc.data().uname} <br>
+                            ${doc.data().uname} &nbsp; <span class="fw-light fst-italic">${doc.data().fechaMostrar}</span> <br>
                             <span class="fw-light">${doc.data().mensaje}</span>
                         </span>
                     </div>
@@ -52,7 +67,7 @@ const contenidoChat = (user) => {
                     chat.innerHTML += /*html*/`
                     <div class="d-flex justify-content-start mb-4">
                         <span class="badge badge-primary mensajeRecibido fw-bold text-start">
-                            ${doc.data().uname} <br>
+                            ${doc.data().uname} &nbsp; <span class="fw-light fst-italic">${doc.data().fechaMostrar}</span> <br>
                             <span class="fw-light">${doc.data().mensaje}</span>
                         </span>
                     </div>
