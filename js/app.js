@@ -7,6 +7,7 @@ firebase.auth().onAuthStateChanged(user => {
     if(user){
         logout()
         formEnviarMsj.classList = 'input-group fixed-bottom p-5';
+        chat.style.overflowY='scroll';
         contenidoChat(user)
     }else{
         loginFunct()
@@ -28,6 +29,7 @@ const contenidoChat = (user) => {
         let fechaMensaje = new Date();
         let dia= fechaMensaje.getDate();
         let mes = fechaMensaje.getMonth();
+        mes+=1
         let anio = fechaMensaje.getFullYear();
         let hora = fechaMensaje.getHours();
         let minutos = fechaMensaje.getMinutes();
