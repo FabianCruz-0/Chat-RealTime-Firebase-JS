@@ -36,7 +36,7 @@ const contenidoChat = (user) => {
         let distinguirHora = 'AM';
         if (hora>=12)
         {
-            hora = 24-hora
+            hora = hora-12
             distinguirHora = 'PM'
         }
 
