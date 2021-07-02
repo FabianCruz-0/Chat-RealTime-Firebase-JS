@@ -40,7 +40,11 @@ const contenidoChat = (user) => {
             distinguirHora = 'PM'
         }
 
-        let fechaAMostrar = ''+dia+'/'+mes+'/'+anio+'. Hora: '+hora+':'+minutos+distinguirHora+'.'
+        if(minutos<10)
+        {
+            minutos='0'+minutos
+        }
+        let fechaAMostrar = ''+dia+'/'+mes+'/'+anio+'. Hora: '+hora+':'+minutos+' '+distinguirHora+'.'
         firebase.firestore().collection('mensajes').add({
             mensaje: mensaje.value,
             uid: user.uid,
